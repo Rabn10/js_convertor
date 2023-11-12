@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Convertor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .converter-container {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>    
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Unit Converter</h1>
+        <label for="fromUnit">From Unit:</label>
+        <select id="fromUnit">
+            <option value="kilometer">KiloMeter</option>
+            <option value="meter">Meter</option>            
+            <option value="cm">Cm</option>
+            <option value="inches">Inches</option>
+        </select>
+
+        <label for="toUnit">To Unit:</label>
+        <select id="toUnit">
+            <option value="kilometer">KiloMeter</option>
+            <option value="meter">Meter</option>    
+            <option value="cm">Cm</option>
+            <option value="inches">Inches</option>
+        </select>
+
+        <label for="value">Value:</label>
+        <input type="number" id="value" placeholder="Enter a value to convert" />
+
+        <label for="value">Result:</label>
+        <p id="result"></p>
+
+        <button id="convertButton" onclick="unitConvertor()">Convert</button>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
